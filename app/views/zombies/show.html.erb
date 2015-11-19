@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @zombie.Name %>
+</p>
+
+<p>
+  <strong>Graveyard:</strong>
+  <%= @zombie.Graveyard %>
+</p>
+
+<p>
+  <strong>Day of death:</strong>
+  <%= @zombie.Day_of_death %>
+</p>
+
+<p>
+  <strong>No of arms:</strong>
+  <%= @zombie.No_of_arms %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @zombie.Description %>
+</p>
+<p>
+<strong>Tweets:</strong>
+  <ul>
+    <% @zombie.tweets.each do |tweet| %>
+        <li><%= link_to tweet.status, tweet_path %></li>
+    <% end %>
+  </ul>
+</p>
+</p>
+<p>
+<strong>Tags:</strong>
+
+
+ <%=  @zombie.tag %>
+
+</ul>
+</p>
+
+<%= link_to 'Edit', edit_zombie_path(@zombie) %> |
+<%= link_to 'Back', zombies_path %>
